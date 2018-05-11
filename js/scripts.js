@@ -1,4 +1,4 @@
-const inputValue = document.querySelector("#search");
+const inputValue = document.querySelector("#searchInput");
 const searchButton = document.querySelector(".searchButton");
 const CLIENTID = "Iv1.e1ad797ab8151ab0";
 const CLIENTSECRET = "b9b29dcad95e9cabf6f4dbf01715bb40936d3900";
