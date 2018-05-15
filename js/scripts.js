@@ -5,7 +5,8 @@ const article = document.querySelector("article");
 const profilePicture = document.createElement("img");
 const usernameDiv = document.createElement("h2");
 const locationDiv = document.createElement("h3");
-const bioDiv = document.createElement("p");
+const bioDiv = document.createElement("h4");
+const followersDiv = document.createElement("h4");
 
 const CLIENTID = "Iv1.e1ad797ab8151ab0";
 const CLIENTSECRET = "b9b29dcad95e9cabf6f4dbf01715bb40936d3900";
@@ -21,7 +22,6 @@ const fetchUsers = async user => {
 const showData = () => {
   fetchUsers(inputValue.value)
     .then(res => {
-      console.log(res);
       profilePicture.setAttribute("src", res.avatar_url);
       pictureDiv.appendChild(profilePicture);
       usernameDiv.textContent = res.name;
@@ -30,13 +30,17 @@ const showData = () => {
       article.appendChild(locationDiv);
       bioDiv.textContent = res.bio;
       article.appendChild(bioDiv);
+      followersDiv.textContent = `Followers: ${res.followers}`;
+      article.appendChild(followersDiv);
     })
     .catch(err => {
       // eslint-disable-next-line
-      console.log(err);
+      console.log("my err: ", err);
     });
 };
 
-searchButton.addEventListener("click", () => {
-  showData();
+document.addEventListener("DOMContentLoaded", async () => {
+  searchButton.addEventListener("click", () => {
+    showData();
+  });
 });
