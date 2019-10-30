@@ -1,0 +1,66 @@
+body {
+  margin: 3%;
+  background-image: url("../images/Mountain-3.jpg");
+  font: 14px/20px Arial, Verdana, sans-serif;
+  color: purple;
+  text-align: center;
+}
+
+header {
+  margin: 1%;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+section {
+  padding: 5%;
+  display: flex;
+  flex: 1;
+  background-color: rgba(187, 143, 206, 0.7);
+  flex-direction: column;
+  align-items: center;
+  width: 450px;
+  height: 75vh;
+  border-radius: 15px;
+  border: rgba(187, 143, 206, 1) solid 2px;
+}
+
+img {
+  width: 300px;
+  border-radius: 50%;
+  border: solid white 3px;
+  transition-property: transform;
+  transition-duration: 0.75s;
+}
+
+img:hover {
+  transform: scale(1.25);
+}
+
+input#searchInput {
+  background: none;
+  border: 0;
+  border-bottom: 1px solid white;
+  font-size: 18px;
+  padding-left: 5px;
+  width: 250px;
+}
+
+button.searchButton {
+  background-color: rgba(187, 143, 206, 0.7);
+  border: rgba(187, 143, 206, 1) 2px solid;
+  border-radius: 5px;
+  color: purple;
+}
+
+h4 {
+  max-width: 300px;
+}
+
+:focus {
+  outline: none;
+}
